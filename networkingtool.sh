@@ -49,5 +49,5 @@ function getIp() {
   ifconfig $NET_IFACE | grep -i "inet addr" | awk '1 {print $2}' | cut -d : -f 2
 }
 
-iface=$(getNetworkInterface Linux Etshernet)
+iface=$(getNetworkInterface Linux Ethernet)
 ip=$(getIp $iface)
